@@ -8,10 +8,12 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,7 +49,7 @@ public class LoginFragment extends MvpFragment<LoginUI, LoginPresenter> implemen
     Button logIn;
 
     @BindView(R.id.login_form)
-    LinearLayout mainScroll;
+    ScrollView mainScroll;
 
 
 //    @BindView(R.id.error_login_text_textview)
@@ -87,12 +89,12 @@ public class LoginFragment extends MvpFragment<LoginUI, LoginPresenter> implemen
             }
         });
 
-//        mainScroll.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-//            @Override
-//            public void onGlobalLayout() {
-//                mainScroll.smoothScrollTo(0, mainScroll.getHeight());
-//            }
-//        });
+        mainScroll.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                mainScroll.smoothScrollTo(0, mainScroll.getHeight());
+            }
+        });
 
         username.setOnTouchListener(new View.OnTouchListener() {
             @Override

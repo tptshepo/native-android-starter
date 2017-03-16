@@ -5,8 +5,12 @@
     android:background="@color/colorPrimary"
     tools:context="com.mgaga.starterapp.components.login.LoginFragment">
 
-    <LinearLayout
+    <ScrollView
         android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
         android:layout_width="300dp"
         android:layout_height="350dp"
         android:layout_gravity="center"
@@ -20,7 +24,6 @@
             android:layout_gravity="center"
             android:background="@color/colorPrimaryDarker"
             android:orientation="vertical">
-
 
             <TextView
                 android:layout_width="wrap_content"
@@ -79,25 +82,25 @@
 
             </android.support.design.widget.TextInputLayout>
 
-            <Button
-                android:id="@+id/btnLogin"
-                style="?android:textAppearanceSmall"
-                android:layout_width="179dp"
-                android:layout_height="42dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorButtonBgColor"
-                android:textColor="@color/colorButtonText"
-                android:text="@string/action_login_in"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="40dp"
-                android:textStyle="bold" />
-
-
 
         </RelativeLayout>
 
+        <Button
+            android:id="@+id/btnLogin"
+            style="?android:textAppearanceSmall"
+            android:layout_width="179dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="56dp"
+            android:background="@color/colorButtonBgColor"
+            android:textColor="@color/colorButtonText"
+            android:text="@string/action_login_in"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            android:textStyle="bold" />
+
     </LinearLayout>
 
+    </ScrollView>
 
 </FrameLayout>
