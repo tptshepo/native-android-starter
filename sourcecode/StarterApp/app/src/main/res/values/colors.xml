@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#003259</color>
+    <color name="colorPrimaryDark">#003566</color>
+    <color name="colorAccent">#206B9A</color>
+    <color name="colorPrimaryDarker">#00294E</color>
+
+    <!--Panel-->
+    <color name="colorPanelText">#ffffff</color>
+    <color name="colorPanelFill">#F2F2F2</color>
+
+    <!--Button-->
+    <color name="colorButtonBgColor">@color/colorAccent</color>
+    <color name="colorButtonText">#ffffff</color>
+
+</resources>
